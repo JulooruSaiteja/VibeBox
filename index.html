@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <title>VibeBox</title>
+</head>
+
+<body>
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+
+    <div class="main">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <div class="sidebar">
+
+            <!-- Navigation -->
+            <div class="nav">
+
+                <div class="nav-option" id="nav-home">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Home</a>
+                </div>
+
+                <div class="nav-option" id="nav-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search</a>
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 YOUR LIBRARY
+            ========================== -->
+
+            <div class="library">
+
+                <div class="options">
+
+                    <div class="library-options">
+                        <i class="fas fa-book-open"
+                           style="color:rgb(83, 176, 83);"></i>
+
+                        <span style="
+                            font-weight: 700;
+                            margin-left: 1rem;
+                            text-transform: uppercase;">
+                            Your Library
+                        </span>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+                </div>
+
+
+                <hr class="library-separator">
+
+
+                <!-- =========================
+                     FAVORITES
+                ========================== -->
+
+                <p class="sidebar-section-label">
+                    <i class="fa-solid fa-heart"
+                       style="color:#1db954;"></i>
+
+                    Favorites
+                </p>
+
+                <div class="sidebar-sublist"
+                     id="fav-songs-list">
+
+                    <!-- Dynamically populated -->
+
+                </div>
+
+
+                <!-- =========================
+                     RECENTLY PLAYED
+                ========================== -->
+
+                <p class="sidebar-section-label">
+
+                    <i class="fa-solid fa-clock"
+                       style="color:#1db954;"></i>
+
+                    Recently Played
+
+                </p>
+
+                <div class="sidebar-sublist"
+                     id="recent-songs-list">
+
+                    <!-- Dynamically populated -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <div class="main-content">
+
+            <!-- Sticky navigation -->
+
+            <div class="sticky-nav">
+
+                <div class="sticky-nav-left">
+
+                    <i class="fa-solid fa-angle-left"></i>
+
+                    <i class="fa-solid fa-angle-right"></i>
+
+                </div>
+
+
+                <!-- Search -->
+
+                <div class="search-container">
+
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="What do you want to play?">
+
+                </div>
+
+
+                <!-- Right side -->
+
+                <div class="sticky-nav-options">
+
+                    <button class="badge">
+                        Explore Premium
+                    </button>
+
+                    <button class="badge install-btn">
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                        Install App
+
+                    </button>
+
+                    <i class="fa-solid fa-user fa-lg"
+                       style="color:rgb(83, 176, 83);">
+                    </i>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 HOME VIEW
+            ========================== -->
+
+            <div id="home-view">
+
+
+            
+                <!-- =========================
+                     TRENDING NOW
+                ========================== -->
+
+                <h2>Trending now near you</h2>
+
+                <div class="card-container">
+
+
+                    <!-- Salaar -->
+
+                    <div class="card">
+
+                        <div class="card-img-container">
+
+                            <img
+                                src="https://pic-bstarstatic.akamaized.net/ugc/e9f9e34873b0676541a8143cf80cfb63.jpg@320w_180h_1e_1c_90q"
+                                class="card-img">
+
+                            <i
+                                class="fa-solid fa-circle-play play-btn"
+                                data-song="assets/Song2.mp3">
+                            </i>
+
+                        </div>
+
+                        <p class="card-title">
+                            Salaar-The Shouraynga
+                        </p>
+
+                        <p class="card-info">
+                            Salaar-Ravi
+                        </p>
+
+                    </div>
+
+
+                    <!-- Kaithi -->
+
+                    <div class="card">
+
+                        <div class="card-img-container">
+
+                            <img
+                                src="https://www.telugu360.com/wp-content/uploads/2019/10/Khaithi-review.jpg"
+                                class="card-img">
+
+                            <i
+                                class="fa-solid fa-circle-play play-btn"
+                                data-song="assets/Song2.mp3">
+                            </i>
+
+                        </div>
+
+                        <p class="card-title">
+                            Kaithi
+                        </p>
+
+                        <p class="card-info">
+                            Kaithi-Anirudh
+                        </p>
+
+                    </div>
+
+
+                    <!-- OG -->
+
+                    <div class="card">
+
+                        <div class="card-img-container">
+
+                            <img
+                                src="https://img-cdn.publive.online/filters:format(webp)/filters:format(webp)/mayapuri/media/media_files/2025/09/24/og-movie-2025-09-24-17-51-26.jpg"
+                                class="card-img">
+
+                            <i
+                                class="fa-solid fa-circle-play play-btn"
+                                data-song="assets/Song1.mp3">
+                            </i>
+
+                        </div>
+
+                        <p class="card-title">
+                            The OG's Katana
+                        </p>
+
+                        <p class="card-info">
+                            They Call Him OG-Thaman
+                        </p>
+
+                    </div>
+
+
+            
+
+                </div>
+
+
+                <!-- =========================
+                     TOP PICKS
+                ========================== -->
+
+                <h2>Top Picks</h2>
+
+                <div class="card-container">
+
+
+                    <!-- Rolex -->
+
+                    <div class="card">
+
+                        <div class="card-img-container">
+
+                            <img
+                                src="https://i.ytimg.com/vi/kJRqCrokKEc/maxresdefault.jpg"
+                                class="card-img">
+
+                            <i
+                                class="fa-solid fa-circle-play play-btn"
+                                data-song="assets/Song1.mp3">
+                            </i>
+
+                        </div>
+
+                        <p class="card-title">
+                            Rolex
+                        </p>
+
+                        <p class="card-info">
+                            Vikram-Anirudh
+                        </p>
+
+                    </div>
+
+
+                    <!-- Shaithaan -->
+
+                    <div class="card">
+
+                        <div class="card-img-container">
+
+                            <img
+                                src="https://images.filmibeat.com/te/img/2025/01/daaku-maharaj-balakrishna-846-1736653932.jpg"
+                                class="card-img">
+
+                            <i
+                                class="fa-solid fa-circle-play play-btn"
+                                data-song="assets/Song2.mp3">
+                            </i>
+
+                        </div>
+
+                        <p class="card-title">
+                            Shaithaan
+                        </p>
+
+                        <p class="card-info">
+                            Daaku Maharaj-Thaman
+                        </p>
+
+                    </div>
+
+
+                    <!-- The Epic Walk -->
+
+                    <div class="card">
+
+                        <div class="card-img-container">
+
+                            <img
+                                src="https://d229kpbsb5jevy.cloudfront.net/sony4/videoasset_images/blitz_assets/1090468630/landscapeThumb/1739412975751_MARCO_Landscape_Thumb.jpg"
+                                class="card-img">
+
+                            <i
+                                class="fa-solid fa-circle-play play-btn"
+                                data-song="assets/Song1.mp3">
+                            </i>
+
+                        </div>
+
+                        <p class="card-title">
+                            The Epic Walk
+                        </p>
+
+                        <p class="card-info">
+                            Marco-Ravi
+                        </p>
+
+                    </div>
+                  
+
+                </div>
+
+
+                <!-- =========================
+                     HIDDEN GEMS
+                ========================== -->
+
+                <h2>Hidden Gems</h2>
+
+                <div class="card-container">
+
+
+                    <!-- Freak Out -->
+
+                    <div class="card">
+
+                        <div class="card-img-container">
+
+                            <img
+                                src="https://wallpapercave.com/wp/wp6159724.jpg"
+                                class="card-img">
+
+                            <i
+                                class="fa-solid fa-circle-play play-btn"
+                                data-song="assets/Song1.mp3">
+                            </i>
+
+                        </div>
+
+                        <p class="card-title">
+                            Freak Out
+                        </p>
+
+                        <p class="card-info">
+                            Disco Raja-Thaman
+                        </p>
+
+                    </div>
+
+
+                    <!-- Beast Mode -->
+
+                    <div class="card">
+
+                        <div class="card-img-container">
+
+                            <img
+                                src="https://images.ottplay.com/images/beast-trailer-180.jpeg?impolicy=ottplay-20210210&width=1200&height=675"
+                                class="card-img">
+
+                            <i
+                                class="fa-solid fa-circle-play play-btn"
+                                data-song="assets/Song2.mp3">
+                            </i>
+
+                        </div>
+
+                        <p class="card-title">
+                            Beast Mode
+                        </p>
+
+                        <p class="card-info">
+                            Beast-Anirudh
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Footer -->
+
+                <div class="footer">
+
+                    <div class="line"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             MUSIC PLAYER
+        ========================== -->
+
+        <div class="music-player">
+
+
+            <!-- Album information -->
+
+            <div class="album">
+            </div>
+
+
+            <!-- Player -->
+
+            <div class="player">
+
+                <div class="player-controls">
+
+
+                    <!-- Shuffle -->
+
+                    <i
+                        class="fa-solid fa-shuffle fa-lg icons-play control-inactive"
+                        id="shuffle"
+                        title="Shuffle">
+                    </i>
+
+
+                    <!-- Previous -->
+
+                    <i
+                        class="fa-solid fa-backward-step fa-lg icons-play"
+                        id="prev"
+                        style="color: rgb(0, 255, 0);">
+                    </i>
+
+
+                    <!-- Play -->
+
+                    <i
+                        class="fa-solid fa-circle-play icons-play main-icon"
+                        style="color:rgb(0, 255, 0);"
+                        id="masterPlay">
+                    </i>
+
+
+                    <!-- Next -->
+
+                    <i
+                        class="fa-solid fa-forward-step fa-lg icons-play"
+                        id="next"
+                        style="color: rgb(0, 255, 0);">
+                    </i>
+
+
+                    <!-- Repeat -->
+
+                    <span class="repeat-container">
+
+                        <i
+                            class="fa-solid fa-repeat fa-lg icons-play control-active"
+                            id="repeat"
+                            title="Repeat All">
+                        </i>
+
+                        <span
+                            id="repeat-one-indicator"
+                            class="repeat-indicator hidden">
+                            1
+                        </span>
+
+                    </span>
+
+                </div>
+
+
+                <!-- Playback bar -->
+
+                <div class="playback-bar">
+
+                    <span
+                        class="curr-time"
+                        id="current-time">
+                        0:00
+                    </span>
+
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        step="1"
+                        class="progress-bar"
+                        id="progress-bar">
+
+                    <span
+                        class="tot-time"
+                        id="total-time">
+                        0:00
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Volume -->
+
+            <div class="controls">
+
+                <i
+                    class="fa-solid fa-volume-high volume-icon"
+                    id="volume-icon">
+                </i>
+
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="100"
+                    class="volume-bar"
+                    id="volume-bar">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Audio -->
+
+    <audio id="audio-player"></audio>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
