@@ -206,25 +206,14 @@ function addToRecentlyPlayed(index) {
         recentlyPlayed.filter(
             song => song !== songName
         );
+     recentlyPlayed.unshift(songName);
 
-
+    recentlyPlayed = recentlyPlayed.slice(0, 3);
     
-
-    recentlyPlayed.unshift(songName);
-
-
-
-    recentlyPlayed =
-        recentlyPlayed.slice(0, 3);
-
-
     localStorage.setItem(
         "recentlyPlayed",
         JSON.stringify(recentlyPlayed)
     );
-
-
-   
 
     updateRecentlyPlayedList();
 
